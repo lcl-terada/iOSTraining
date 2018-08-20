@@ -28,7 +28,11 @@ class TaskFour: UIView, UITextFieldDelegate{
         button.topAnchor.constraint(equalTo: topAnchor, constant: 200).isActive = true
         button.setTitle("Tap", for: UIControlState.normal)
         button.sizeToFit()
-        
+        button.addTarget(self, action: #selector(self.buttonTapped(sender:)), for: .touchUpInside)
+    }
+    
+    @objc func buttonTapped(sender:UIButton!){
+        label.text = "YES"
     }
     
     required init?(coder aDecoder: NSCoder) {
