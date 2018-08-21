@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  taskFour
+//  Customize
 //
-//  Created by Kunio Terada on 2018/08/17.
+//  Created by Kunio Terada on 2018/08/20.
 //  Copyright © 2018年 Kunio Terada. All rights reserved.
 //
 
@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     private(set) lazy var viewController = ViewController()
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
