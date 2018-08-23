@@ -13,7 +13,6 @@ class FirstViewController: UIViewController {
         nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         nextButton.addTarget(self, action: #selector(FirstViewController.goNext(_:)), for: .touchUpInside)
         view.backgroundColor = UIColor.white
-        
         view.addSubview(nextButton)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true

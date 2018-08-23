@@ -13,7 +13,6 @@ class NextViewController: UIViewController {
         backButton.backgroundColor = UIColor.white
         backButton.addTarget(self, action: #selector(NextViewController.back(_:)), for: .touchUpInside)
         view.backgroundColor = UIColor.orange
-        
         view.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
