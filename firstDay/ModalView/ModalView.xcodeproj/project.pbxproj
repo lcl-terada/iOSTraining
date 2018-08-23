@@ -11,7 +11,7 @@
 		E73FC232212CF12000FF5A96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73FC231212CF12000FF5A96 /* Assets.xcassets */; };
 		E73FC235212CF12000FF5A96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E73FC233212CF12000FF5A96 /* LaunchScreen.storyboard */; };
 		E73FC23D212CF1C800FF5A96 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73FC23C212CF1C800FF5A96 /* NextViewController.swift */; };
-		E7F80A85212CF76600B1620F /* ButtonTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F80A84212CF76600B1620F /* ButtonTapView.swift */; };
+		E7F80A85212CF76600B1620F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F80A84212CF76600B1620F /* FirstViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +21,7 @@
 		E73FC234212CF12000FF5A96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E73FC236212CF12000FF5A96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E73FC23C212CF1C800FF5A96 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
-		E7F80A84212CF76600B1620F /* ButtonTapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTapView.swift; sourceTree = "<group>"; };
+		E7F80A84212CF76600B1620F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +38,6 @@
 		E73FC21E212CF11F00FF5A96 = {
 			isa = PBXGroup;
 			children = (
-				E73FC23C212CF1C800FF5A96 /* NextViewController.swift */,
 				E73FC229212CF11F00FF5A96 /* ModalView */,
 				E73FC228212CF11F00FF5A96 /* Products */,
 			);
@@ -55,7 +54,8 @@
 		E73FC229212CF11F00FF5A96 /* ModalView */ = {
 			isa = PBXGroup;
 			children = (
-				E7F80A84212CF76600B1620F /* ButtonTapView.swift */,
+				E7F80A84212CF76600B1620F /* FirstViewController.swift */,
+				E73FC23C212CF1C800FF5A96 /* NextViewController.swift */,
 				E73FC22A212CF11F00FF5A96 /* AppDelegate.swift */,
 				E73FC231212CF12000FF5A96 /* Assets.xcassets */,
 				E73FC233212CF12000FF5A96 /* LaunchScreen.storyboard */,
@@ -134,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7F80A85212CF76600B1620F /* ButtonTapView.swift in Sources */,
+				E7F80A85212CF76600B1620F /* FirstViewController.swift in Sources */,
 				E73FC23D212CF1C800FF5A96 /* NextViewController.swift in Sources */,
 				E73FC22B212CF11F00FF5A96 /* AppDelegate.swift in Sources */,
 			);
