@@ -9,13 +9,12 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         
         let nextButton = UIButton()
-        
+        view.backgroundColor = UIColor.white
         nextButton.setTitle("present modal", for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         nextButton.backgroundColor = UIColor.gray
-        view.backgroundColor = UIColor.white
         view.addSubview(nextButton)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -43,18 +42,18 @@ class FirstViewController: UIViewController {
     }
     
     private func showNextViewController() {
-        let nvc = NextViewController()
+        let NextVC = NextViewController()
         //NextViewControllerのdelegateを自分にセット
-        nvc.delegate = self
+        NextVC.delegate = self
         //present(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
-        present(nvc, animated: true, completion: nil)
+        present(NextVC, animated: true, completion: nil)
         }
     }
 
 //extensionでクラスを拡張
-extension FirstViewController: NextViewControllerDelegate {
+extension FirstViewController: FirstViewControllerDelegate {
     //NextViewControllerのdelegateメソッドを実装
-    func nextViewController(_ sampleViewController: NextViewController, backButton button: UIButton) {
+    func nextViewController(_ nextViewController: NextViewController, backButton button: UIButton) {
         dismiss(animated: true, completion: nil)
     }
 }
