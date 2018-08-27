@@ -1,21 +1,21 @@
 import UIKit
 
-//NextViewControllerDelegateが準拠するメソッド
-//こうすることでプロトコルを採用したDelegateパターンを使える
-class FirstViewController: UIViewController, NextViewControllerDelegate {
+class FirstViewController: UIViewController {
+    
+    //viewDidAppearが呼ばれたかどうかのプロパティ
+    private var isFirstViewDidAppear = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let nextButton = UIButton()
         
-        nextButton.setTitle("Tap!", for: .normal)
+        nextButton.setTitle("present modal", for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         nextButton.backgroundColor = UIColor.gray
         view.backgroundColor = UIColor.white
-        
         view.addSubview(nextButton)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -28,16 +28,32 @@ class FirstViewController: UIViewController, NextViewControllerDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    //FirstViewControllerのnextButtonTappedが呼ばれる
-    @objc func nextButtonTapped(_ sender: UIButton){
-        //NextViewControllerインスタンスを生成
-        let nvc = NextViewController()
-        //delegateプロパティにFirstViewControllerを代入
-        nvc.delegate = FirstViewController()
-        //present(_:animated:completion:) でNextViewControllerを表示
-        present(nvc, animated: true, completion: nil)
+    override func viewDidAppear(_ animated: Bool) {
+        //初回はif文に入って処理が終わる
+        if isFirstViewDidAppear {
+            isFirstViewDidAppear =  false
+            return
+        }
+        showNextViewController()
     }
     
+    //FirstViewControllerのnextButtonTappedが呼ばれる
+    @objc func nextButtonTapped(_ sender: UIButton){
+        showNextViewController()
+    }
+    
+    private func showNextViewController() {
+        let nvc = NextViewController()
+        //NextViewControllerのdelegateを自分にセット
+        nvc.delegate = self
+        //present(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
+        present(nvc, animated: true, completion: nil)
+        }
+    }
+
+//extensionでクラスを拡張
+extension FirstViewController: NextViewControllerDelegate {
+    //NextViewControllerのdelegateメソッドを実装
     func nextViewController(_ sampleViewController: NextViewController, backButton button: UIButton) {
         dismiss(animated: true, completion: nil)
     }

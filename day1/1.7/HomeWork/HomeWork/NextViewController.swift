@@ -1,26 +1,26 @@
 import UIKit
 
-//NextViewControllerDelegateがプロトコル名、nextViewControllerがこのプロトコルに準拠したクラスが実装するメソッド
+//delegateのためのプロトコルを定義
 protocol NextViewControllerDelegate: class {
+    //ここにDelegateメソッドの定義
     func nextViewController(_ sampleViewController: NextViewController, backButton button: UIButton)
 }
 
 class NextViewController: UIViewController {
-
     //NextViewControllerDelegateに準拠していたらどんなクラスでもOK
-    weak var delegate: NextViewControllerDelegate?
+    weak var delegate: NextViewControllerDelegate? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let backButton = UIButton()
         
-        backButton.setTitle("BACK", for: .normal)
+        backButton.setTitle("close modal", for: .normal)
         backButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         backButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         backButton.backgroundColor = UIColor.white
         view.backgroundColor = UIColor.gray
-        
         view.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -32,11 +32,9 @@ class NextViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     //NextViewControllerのボタンをタップするとbackButtonTappedが呼ばれる
     @objc func backButtonTapped(_ sender: UIButton){
-        //NextViewControllerDelegateに準拠しているのでnextViewControllerがあるからdelegateプロパティを呼ぶ
-        delegate?.nextViewController(self, backButton: sender)
-//        dismiss(animated: true, completion: nil)
+    //delegateを介してモーダルを消す
+    delegate?.nextViewController(self, backButton: sender)
     }
 }
