@@ -8,7 +8,7 @@ protocol FirstViewControllerDelegate: class {
 
 class NextViewController: UIViewController {
     //NextViewControllerDelegateに準拠していたらどんなクラスでもOK
-    weak var delegate: FirstViewControllerDelegate? = nil
+    weak var delegate: FirstViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,7 @@ class NextViewController: UIViewController {
         backButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         backButton.backgroundColor = UIColor.white
+        
         view.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -34,6 +35,6 @@ class NextViewController: UIViewController {
     //NextViewControllerのbackButtonTappedが呼ばれる
     @objc func backButtonTapped(_ sender: UIButton){
     //delegateを介してモーダルを消す
-    delegate?.nextViewController(self, backButton: sender)
+        delegate?.nextViewController(self, backButton: sender)
     }
 }
