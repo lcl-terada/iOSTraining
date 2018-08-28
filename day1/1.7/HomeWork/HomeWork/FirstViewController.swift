@@ -10,12 +10,12 @@ class FirstViewController: UIViewController {
         
         let nextButton = UIButton()
         view.backgroundColor = UIColor.white
+        
         nextButton.setTitle("present modal", for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
         nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
         nextButton.backgroundColor = UIColor.gray
-        
         view.addSubview(nextButton)
         nextButton.translatesAutoresizingMaskIntoConstraints = false
         nextButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -49,7 +49,7 @@ class FirstViewController: UIViewController {
         //present(viewControllerToPresent: UIViewController, animated: Bool, completion: (() -> Void)?)
         present(nextVC, animated: true, completion: nil)
     }
-    }
+}
 
 //extensionでクラスを拡張
 extension FirstViewController: FirstViewControllerDelegate {

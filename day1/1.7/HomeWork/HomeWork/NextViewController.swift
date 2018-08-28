@@ -15,12 +15,12 @@ class NextViewController: UIViewController {
         
         let backButton = UIButton()
         view.backgroundColor = UIColor.gray
+        
         backButton.setTitle("close modal", for: .normal)
         backButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         backButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
         backButton.addTarget(self, action: #selector(backButtonTapped), for: .touchUpInside)
         backButton.backgroundColor = UIColor.white
-        
         view.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -32,9 +32,10 @@ class NextViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     //NextViewControllerのbackButtonTappedが呼ばれる
     @objc func backButtonTapped(_ sender: UIButton){
-    //delegateを介してモーダルを消す
+        //delegateを介してモーダルを消す
         delegate?.nextViewController(self, backButton: sender)
     }
 }
