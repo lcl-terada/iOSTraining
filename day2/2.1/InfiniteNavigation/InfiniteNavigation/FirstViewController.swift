@@ -20,12 +20,21 @@ class FirstViewController: UIViewController {
         pushButton.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
         pushButton.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
         
+        let string: String
+        if let count = navigationController?.viewControllers.count {
+            string = "\(count)"
+        } else {
+            string = ""
+        }
+        title = string
     }
     
     @objc func pushButtonTapped(_ sender: UIButton) {
         let viewController = FirstViewController()
         navigationController?.pushViewController(viewController, animated: true)
+        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
