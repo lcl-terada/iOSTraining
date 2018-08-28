@@ -13,9 +13,9 @@ class NextViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backButton = UIButton()
         view.backgroundColor = UIColor.gray
         
+        let backButton = UIButton()
         backButton.setTitle("close modal", for: .normal)
         backButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         backButton.setTitleColor(UIColor.gray, for: UIControlState.normal)

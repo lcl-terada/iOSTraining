@@ -8,9 +8,9 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nextButton = UIButton()
         view.backgroundColor = UIColor.white
         
+        let nextButton = UIButton()
         nextButton.setTitle("present modal", for: .normal)
         nextButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30.0)
         nextButton.setTitleColor(UIColor.white, for: UIControlState.normal)
