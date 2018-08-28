@@ -23,7 +23,8 @@ class FirstViewController: UIViewController {
     }
     
     @objc func pushButtonTapped(_ sender: UIButton) {
-        navigationController?.pushViewController(self, animated: true)
+        let viewController = FirstViewController()
+        navigationController?.pushViewController(viewController, animated: true)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
