@@ -31,7 +31,6 @@ class FirstViewController: UIViewController {
     @objc func pushButtonTapped(_ sender: UIButton) {
         let viewController = FirstViewController()
         navigationController?.pushViewController(viewController, animated: true)
-        
     }
     
     override func didReceiveMemoryWarning() {
