@@ -11,8 +11,9 @@ class NextViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
         let buttonTapped = UILabel()
-        buttonTapped.text = "Button Tapped"
         buttonTapped.font = UIFont.boldSystemFont(ofSize: 25.0)
+        guard let buttonString = buttonString else { return }
+        buttonTapped.text = "Button \(buttonString) Tapped"
         view.addSubview(buttonTapped)
         buttonTapped.translatesAutoresizingMaskIntoConstraints = false
         buttonTapped.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -23,5 +24,4 @@ class NextViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 }

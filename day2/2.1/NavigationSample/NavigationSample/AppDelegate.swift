@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  NavigationSample
-//
-//  Created by Kunio Terada on 2018/08/29.
-//  Copyright © 2018年 Kunio Terada. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
