@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         button.setTitleColor(UIColor.blue, for: UIControlState.normal)
         view.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.topAnchor.constraint(equalTo: label.topAnchor, constant: 50.0).isActive = true
+        button.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 20.0).isActive = true
         button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         let textField = UITextField()
@@ -30,14 +30,14 @@ class ViewController: UIViewController {
         textField.borderStyle = .roundedRect
         view.addSubview(textField)
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.topAnchor.constraint(equalTo: button.topAnchor, constant: 70.0).isActive = true
+        textField.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 20.0).isActive = true
         textField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         let imageView = UIImageView()
         imageView.image = UIImage(named: "vinyl_record")
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.topAnchor.constraint(equalTo: textField.topAnchor, constant: 60.0).isActive = true
+        imageView.topAnchor.constraint(equalTo: textField.bottomAnchor, constant: 20.0).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
         imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
