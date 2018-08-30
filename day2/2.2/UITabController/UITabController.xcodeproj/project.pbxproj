@@ -12,7 +12,6 @@
 		E734A127213694630040A71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E734A126213694630040A71A /* Assets.xcassets */; };
 		E734A1322136952F0040A71A /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734A1312136952F0040A71A /* SecondViewController.swift */; };
 		E734A134213697430040A71A /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734A133213697430040A71A /* ThirdViewController.swift */; };
-		E734A136213698040040A71A /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734A135213698040040A71A /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		E734A12B213694630040A71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E734A1312136952F0040A71A /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E734A133213697430040A71A /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
-		E734A135213698040040A71A /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 			children = (
 				E734A11F213694630040A71A /* AppDelegate.swift */,
 				E734A121213694630040A71A /* FirstViewController.swift */,
-				E734A135213698040040A71A /* MainTabController.swift */,
 				E734A1312136952F0040A71A /* SecondViewController.swift */,
 				E734A133213697430040A71A /* ThirdViewController.swift */,
 				E734A126213694630040A71A /* Assets.xcassets */,
@@ -138,7 +135,6 @@
 			files = (
 				E734A122213694630040A71A /* FirstViewController.swift in Sources */,
 				E734A134213697430040A71A /* ThirdViewController.swift in Sources */,
-				E734A136213698040040A71A /* MainTabController.swift in Sources */,
 				E734A1322136952F0040A71A /* SecondViewController.swift in Sources */,
 				E734A120213694630040A71A /* AppDelegate.swift in Sources */,
 			);
