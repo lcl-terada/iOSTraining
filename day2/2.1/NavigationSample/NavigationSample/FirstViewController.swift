@@ -1,10 +1,6 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
-    @objc weak var buttonA: UIButton!
-    @objc weak var buttonB: UIButton!
-    @objc weak var buttonC: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
