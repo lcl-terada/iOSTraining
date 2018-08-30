@@ -45,7 +45,10 @@ class FirstViewController: UIViewController {
         UIView.transition(with: view, duration: 4, options: .transitionCurlUp, animations: {
             self.imageView1.isHidden = true
             self.imageView2.isHidden = false
-        },completion: nil)
+        },completion: {(finished: Bool) -> Void in
+            self.imageView1.isHidden = false
+            self.imageView2.isHidden = true
+        })
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
