@@ -10,7 +10,6 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    
     let imageView1 = UIImageView()
     let imageView2 = UIImageView()
     
@@ -26,7 +25,6 @@ class FirstViewController: UIViewController {
         imageView1.widthAnchor.constraint(equalToConstant: 150.0).isActive = true
         imageView1.heightAnchor.constraint(equalToConstant: 150.0).isActive = true
         imageView1.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
         
         imageView2.image = UIImage(named: "vinyl_record2")
         view.addSubview(imageView2)
@@ -54,7 +52,6 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         
     }
-        // Dispose of any resources that can be recreated.
-    }
+}
 
 
