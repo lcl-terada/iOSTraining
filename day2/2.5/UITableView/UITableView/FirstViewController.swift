@@ -2,8 +2,6 @@ import UIKit
 
 class FirstViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
